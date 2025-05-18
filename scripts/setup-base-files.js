@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
@@ -26,3 +27,27 @@ Object.entries(sources).forEach(([targetFile, sourcePath]) => {
     console.log(`[=] ${targetFile} уже существует`);
   }
 });
+
+// Инициализация husky
+const { execSync } = require('child_process');
+
+try {
+  if (!fs.existsSync(path.join(baseDir, '.husky'))) {
+    execSync('npx husky install', { stdio: 'inherit' });
+    console.log('[+] Husky инициализирован');
+  } else {
+    console.log('[=] Husky уже инициализирован');
+  }
+
+  const preCommitPath = path.join(baseDir, '.husky/pre-commit');
+  if (!fs.existsSync(preCommitPath)) {
+    fs.mkdirSync(path.join(baseDir, '.husky'), { recursive: true });
+    fs.writeFileSync(preCommitPath, '#!/bin/sh\nnpx lint-staged\n');
+    fs.chmodSync(preCommitPath, 0o755);
+    console.log('[+] pre-commit хук создан');
+  } else {
+    console.log('[=] pre-commit хук уже существует');
+  }
+} catch (err) {
+  console.error('[!] Ошибка при установке Husky:', err.message);
+}

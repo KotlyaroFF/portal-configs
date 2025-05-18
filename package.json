@@ -7,6 +7,9 @@
     "prepare": "husky install && npm run setup:base",
     "setup:base": "node scripts/setup-base-files.js"
   },
+  "bin": {
+    "portal-configs": "./scripts/setup-base-files.js"
+  },
   "prettier": "./prettier",
   "keywords": [],
   "author": "Pavel Kotliarov https://github.com/KotlyaroFF, shpun.0613@gmail.com",
