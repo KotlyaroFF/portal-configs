@@ -1,11 +1,14 @@
 {
   "name": "portal-configs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "license": "MIT",
   "private": false,
   "scripts": {
     "prepare": "husky install && npm run setup:base",
     "setup:base": "node scripts/setup-base-files.js"
+  },
+  "bin": {
+    "portal-configs": "./scripts/setup-base-files.js"
   },
   "prettier": "./prettier",
   "keywords": [],
