@@ -1,6 +1,6 @@
 {
   "name": "portal-configs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -31,7 +31,8 @@
     "./eslint": "./eslint/index.js",
     "./prettier": "./prettier/index.js",
     "./tsconfig": "./tsconfig/base.json",
-    "./stylelint": "./stylelint/index.js"
+    "./stylelint": "./stylelint/index.js",
+    "./lintstagedrc": "./lintstagedrc.json"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
@@ -46,6 +47,7 @@
     "prettier",
     "stylelint",
     "tailwind",
-    "node"
+    "node",
+    "lintstagedrc.json"
   ]
 }
