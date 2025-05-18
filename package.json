@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install && npm run setup:ignores",
-    "setup:ignores": "node scripts/setup-ignores.js"
+    "setup:base": "node scripts/setup-base-files.js"
   },
   "prettier": "./prettier",
   "keywords": [],

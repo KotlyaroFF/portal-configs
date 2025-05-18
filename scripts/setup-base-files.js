@@ -8,6 +8,7 @@ const sources = {
   '.prettierignore': path.resolve(__dirname, '../prettier/base.ignore'),
   '.eslintignore': path.resolve(__dirname, '../eslint/base.ignore'),
   '.stylelintignore': path.resolve(__dirname, '../stylelint/base.ignore'),
+  '.nvmrc': path.resolve(__dirname, '../node/base.version'),
 };
 
 Object.entries(sources).forEach(([targetFile, sourcePath]) => {
