@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install && npm run setup:ignores",
+    "setup:ignores": "node scripts/setup-ignores.js"
   },
   "prettier": "./prettier",
   "keywords": [],
@@ -14,6 +15,7 @@
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "eslint": "^9.27.0",
+    "eslint-plugin-unicorn": "^59.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.0.0",
     "nativewind": "^4.1.23",
