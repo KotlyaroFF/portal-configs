@@ -32,7 +32,7 @@
     "./prettier": "./prettier/index.js",
     "./tsconfig": "./tsconfig/base.json",
     "./stylelint": "./stylelint/index.js",
-    "./lintstagedrc": "./lintstagedrc.json"
+    "./lintstagedrc": "./lintstagedrc/index.json"
   },
   "peerDependencies": {
     "eslint": "^9.0.0",
@@ -48,6 +48,6 @@
     "stylelint",
     "tailwind",
     "node",
-    "lintstagedrc.json"
+    "lintstagedrc"
   ]
 }

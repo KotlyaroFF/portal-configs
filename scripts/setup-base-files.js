@@ -6,10 +6,9 @@ const baseDir = process.cwd();
 const sources = {
   '.gitignore': path.resolve(__dirname, '../gitignore/base.gitignore'),
   '.prettierignore': path.resolve(__dirname, '../prettier/base.ignore'),
-  '.eslintignore': path.resolve(__dirname, '../eslint/base.ignore'),
   '.stylelintignore': path.resolve(__dirname, '../stylelint/base.ignore'),
   '.nvmrc': path.resolve(__dirname, '../node/base.version'),
-  '.lintstagedrc.json': path.resolve(__dirname, '../lintstagedrc.json'),
+  '.lintstagedrc.json': path.resolve(__dirname, '../lintstagedrc/index.json'),
 };
 
 Object.entries(sources).forEach(([targetFile, sourcePath]) => {
