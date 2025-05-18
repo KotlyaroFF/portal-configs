@@ -1,8 +1,10 @@
 # Node
 node_modules/
 dist/
+build/
 .env*
 *.log
+*.tsbuildinfo
 
 # Editor
 .vscode/
@@ -11,8 +13,8 @@ dist/
 # OS
 .DS_Store
 
-# Build tools
-coverage/
-.next/
-build/
-out/
+# Lint
+.eslintcache
+
+# npm/yarn/pnpm
+package-lock.json
